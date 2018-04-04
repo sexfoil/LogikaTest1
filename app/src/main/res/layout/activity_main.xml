@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="20"
+    tools:context="com.example.android.logikatest1.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/info_set"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="35">
+
+        <TextView
+            android:id="@+id/x_title"
+            style="@style/title"
+            android:layout_weight="6"
+            android:text="Y(x) = "
+            android:background="@color/colorDark"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/x_1"
+            style="@style/title"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/x_2"
+            style="@style/title"
+            android:background="@color/colorDark"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/x_3"
+            style="@style/title"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/x_4"
+            style="@style/title"
+            android:background="@color/colorDark"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/x_5"
+            style="@style/title"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@color/colorDark"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="17"
+        />
+
+    <LinearLayout
+        android:id="@+id/buttons_set"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/colorDark"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <Button
+            android:id="@+id/draw_result"
+            style="@style/footer_buttons"
+            android:onClick="build_charts"
+            android:text="@string/build_charts" />
+
+        <Button
+            android:id="@+id/reset_data"
+            style="@style/footer_buttons"
+            android:onClick="reset_data"
+            android:text="@string/reset_data" />
+
+        <Button
+            android:id="@+id/exit"
+            style="@style/footer_buttons"
+            android:layout_weight="1"
+            android:onClick="exit"
+            android:text="@string/exit" />
+
+    </LinearLayout>
+
+</LinearLayout>
